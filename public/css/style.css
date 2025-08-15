@@ -1,0 +1,353 @@
+/* body{
+    background-color: #6d270a;
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-weight: 800;
+}
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+} */
+
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Optional: Add a subtle shadow to make it pop */
+.status.pending {
+    background-color: #e17055; /* Orange */
+    box-shadow: 0 2px 6px rgba(225, 112, 85, 0.3);
+}
+
+.status.complete {
+    background-color: #00b894; /* Green */
+    box-shadow: 0 2px 6px rgba(0, 184, 148, 0.3);
+}
+
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Heading Section */
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.heading h1 {
+    color: #2f3640;
+    font-size: 2rem;
+}
+
+.heading a {
+    background-color: #0984e3;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.heading a:hover {
+    background-color: #0652dd;
+}
+
+/* Task Card Styling */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+strong{
+    color: #2d3436;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    color: #2d3436;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #363;
+    margin: 6px 0;
+}
+
+/* Status Label */
+.card span {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    
+}
+
+.card p span:contains("Pending") {
+    background-color: #e17055;
+    color: #fff;
+}
+
+.card p span:contains("Complete") {
+    background-color: #00b894;
+    color: #fff;
+}
+
+/* Date Styling */
+.card h5 {
+    color: #b2bec3;
+    font-weight: normal;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Edit & Delete Buttons */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.card a.edit,
+.delete {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    border:none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+/* Edit Button */
+.card a.edit {
+    background-color: #00b894;
+    color: #fff;
+}
+.card a.edit:hover {
+    background-color: #019874;
+    transform: translateY(-2px);
+}
+
+/* Delete Button */
+.delete {
+    background-color: #e17055;
+    color: #fff;
+}
+.delete:hover {
+    background-color: #c44536;
+    transform: translateY(-2px);
+}
+
+.filter a{
+    color: #000;
+    background-color: #f5f6fa;
+}
+.filter a:hover{
+    color: #fff;
+    background-color: #636e72;
+}
+
+/* create design  */
+
+/* Form Card Styling (reuse existing card look) */
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card th {
+    text-align: left;
+    padding: 10px;
+    font-weight: 600;
+    color: #2d3436;
+    vertical-align: top;
+    width: 25%;
+}
+
+.card td {
+    padding: 10px;
+}
+
+/* Inputs & Textareas */
+.card input[type="text"],
+.card textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card input[type="text"]:focus,
+.card textarea:focus {
+    border-color: #0984e3;
+    box-shadow: 0 0 4px rgba(9, 132, 227, 0.3);
+    outline: none;
+}
+
+/* Textarea Specific */
+.card textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.card input[type="submit"] {
+    background-color: #0984e3;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card input[type="submit"]:hover {
+    background-color: #0652dd;
+}
+
+
+.error{
+    color: red;
+}
+
+
+
+
+/* ///////////////////////. Mobile View /////////////// */
+
+
+
+/* Mobile & Tablet Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .heading a {
+        width: 100%;
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card-actions {
+        flex-direction: row; /* stay in row */
+        gap: 6px;
+        flex-wrap: wrap; /* allow wrapping if too small */
+    }
+
+    .card a.edit,
+    .delete {
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    /* Form elements fit screen */
+    .card table,
+    .card th,
+    .card td {
+        display: block;
+        width: 100%;
+    }
+
+    .card th {
+        width: 100%;
+        padding: 6px 0;
+    }
+
+    .card td {
+        padding: 6px 0;
+    }
+
+    .card input[type="text"],
+    .card textarea,
+    .card input[type="submit"] {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 1.3rem;
+    }
+
+    .card h3 {
+        font-size: 1.05rem;
+    }
+
+    .card p,
+    .card span,
+    .card h5 {
+        font-size: 0.8rem;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card-actions {
+        gap: 4px;
+    }
+}
